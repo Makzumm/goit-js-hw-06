@@ -6,17 +6,16 @@ function onFormSubmit(event) {
     event.preventDefault();
 
     const { email, password } = event.currentTarget;
+    const newObj = {
+            email: email.value,
+            password: password.value
+        }
 
     if (email.value === '' || password.value === '') {
         alert('Please, fill all froms');
+    } else {
+        console.log(newObj)
     }
-
-    const newObj = {
-        email: email.value,
-        password: password.value
-    }
-
-    console.log(newObj)
 
     event.currentTarget.reset();
 }
